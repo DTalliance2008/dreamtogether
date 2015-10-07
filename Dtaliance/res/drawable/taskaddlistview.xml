@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TaskaddlistviewActivity" >
+
+    <TextView
+      	android:id="@+id/tv_taskaddlistview_roleshow"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_marginTop="5dp"
+      	android:layout_marginRight="5dp"
+      	android:layout_marginLeft="20dp"
+      	android:text="张三："
+      	android:textSize="16sp"
+      	 />
+      <EditText
+      	android:id="@+id/et_taskaddlistview_rolepriority"
+      	android:layout_width="match_parent"
+      	android:layout_height="wrap_content"
+      	android:layout_marginTop="5dp"
+      	android:layout_marginRight="5dp"
+      	android:textColor="#ff6666"
+      	android:text="请输入责任人任务权重"
+      	android:textSize="16sp"
+      	android:layout_toRightOf="@+id/tv_taskaddlistview_roleshow"
+      	android:background="@drawable/homepage_tv" />
+
+</RelativeLayout>
