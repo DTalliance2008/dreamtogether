@@ -252,7 +252,7 @@
       	android:background="@drawable/task_background_line" />
       <!-- 确认button -->
       <Button 
-      	android:id="@+id/bt_task_confirm"
+      	android:id="@+id/bt_teamcreate_confirm"
       	android:layout_width="wrap_content"
       	android:layout_height="wrap_content"
       	android:layout_below="@+id/bt_teamcreate_linefive"
