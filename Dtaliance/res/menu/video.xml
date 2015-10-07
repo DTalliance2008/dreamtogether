@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/exitVideo"
+        android:title="@string/quit"
+        android:showAsAction="ifRoom|withText"/>
+    
+    <item 
+        android:id="@+id/backVideo"
+        android:title="@string/back"
+        android:showAsAction="ifRoom|withText"/>"
+    
+
+</menu>

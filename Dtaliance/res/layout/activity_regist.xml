@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_background"
+   >
+
+<RelativeLayout
+    android:id="@+id/regster_div"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"    
+    android:background="@drawable/register_background_div"
+    android:orientation="vertical"
+     >
+    
+    <TextView 
+        android:id="@+id/reister_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:text="账号"
+        android:layout_alignParentTop="true"
+    	android:layout_marginTop="5dp"
+    	
+        />
+    <EditText 
+    		android:id="@+id/et_regist_email"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:layout_marginRight="10dp"
+    		android:background="@drawable/register_background_edittext" 
+    		android:hint="用户名"
+    		android:layout_below="@id/reister_username_tv"
+    		android:singleLine="true"
+    		android:layout_marginTop="3dp"
+    		android:inputType="text"/>
+      <!-- 密码 text -->
+      <TextView 
+      	android:id="@+id/reister_password_tv"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_marginLeft="10dp"
+      	android:layout_below="@id/et_regist_email"
+      	android:layout_marginTop="3dp"
+      	android:text="密码"
+      	android:textSize="18sp"
+      	/>
+      <EditText 
+      	android:id="@+id/et_regist_passwd"
+      	android:layout_width="match_parent"
+      	android:layout_height="wrap_content"
+      	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:background="@drawable/register_background_edittext" 
+    	android:layout_below="@id/reister_password_tv"
+      	android:singleLine="true"
+      	android:layout_marginTop="3dp"
+      	android:hint="密码"
+      	android:inputType="textPassword" />
+       <!-- 确认密码 text -->
+      <TextView 
+      	android:id="@+id/reister_pw_tv"
+      	android:layout_marginLeft="10dp"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_below="@id/et_regist_passwd"
+      	android:layout_marginTop="3dp"
+      	android:text="请确认密码"
+      	android:textSize="18sp"
+      	/>
+      <EditText 
+      	android:id="@+id/et_regist_repasswd"
+      	android:layout_width="match_parent"
+      	android:layout_height="wrap_content"
+      	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_marginTop="3dp"
+    	android:background="@drawable/register_background_edittext" 
+    	android:layout_below="@id/reister_pw_tv"
+      	android:singleLine="true"
+      	android:hint="请再次输入密码"
+      	android:inputType="textPassword" />
+      
+      <!-- 注册button -->
+      <Button 
+      	android:id="@+id/bt_regist_confirm"
+      	android:layout_width="wrap_content"
+      	android:layout_height="wrap_content"
+      	android:layout_marginTop="10dp"
+      	android:layout_below="@id/et_regist_repasswd"
+      	android:layout_centerInParent="true"
+      	android:text="注册"
+      	android:background="@drawable/register_background_bt" />
+    
+</RelativeLayout>
+    
+    
+    
+
+</RelativeLayout>
+
+
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:id="@+id/widget31"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<EditText
+    android:id="@+id/et_regist_email"
+    android:layout_width="345px"
+    android:layout_height="200px"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="260dp"
+    android:gravity="center"
+    android:hint="请输入用户名(email)"
+    android:textSize="18sp" />
+
+<EditText
+    android:id="@+id/et_regist_passwd"
+    android:layout_width="345px"
+    android:layout_height="200px"
+    android:layout_alignBottom="@+id/widget34"
+    android:layout_alignLeft="@+id/widget34"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="180dp"
+    android:layout_centerHorizontal="true"
+    android:hint="请输入密码"
+        android:gravity="center"
+    
+    android:textSize="18sp" />
+
+<Button
+    android:id="@+id/bt_regist_confirm"
+    android:layout_width="142px"
+    android:layout_height="200px"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:hint="注册" />
+
+<EditText
+    android:id="@+id/et_regist_repasswd"
+    android:layout_width="345px"
+    android:layout_height="200px"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="100dp"
+    android:layout_centerHorizontal="true"
+        android:gravity="center"
+    
+    android:hint="请再次确认密码"
+    android:textSize="18sp" />
+
+</RelativeLayout> -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/widget32"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+	android:id="@+id/tvtitle"
+	android:layout_width="fill_parent"
+	android:layout_height="29dp"
+	android:background="#f1f1f1"
+	android:gravity="center"
+	android:text="你还 敢梦？" />
+<ListView 
+    android:layout_width="wrap_content"   
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"    
+    android:id="@+id/lv_create_dream_saying"  >
+    
+    
+</ListView>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:background="@drawable/dreamwrite_background_bt"    
+    >
+<!-- 梦想-->    
+    
+        
+     <TextView
+        android:id="@+id/tv_writedream_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dreamwrite_background_bt"  
+        android:textColor="#666666"
+        android:textSize="18sp"
+        android:gravity="center"
+    	android:hint="为你的梦想呐喊"
+         />
+<!-- 编写梦 -->
+ <EditText 
+        
+        android:id="@+id/et_writedream_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dreamwrite"
+        android:gravity="top"
+        android:textSize="16sp"
+        android:textColor="#990066"
+        android:layout_below="@+id/tv_writedream_title"
+        android:layout_above="@+id/bt_writedream_upload"
+        android:hint="写下你的梦想。。。"
+     />
+
+ 
+     <Button 
+       
+        android:id="@+id/bt_writedream_upload"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dreamwrite_background_bt"
+        android:textSize="18sp"
+        android:textColor="#ffffcc"
+        android:text="晒梦"
+               />
+
+</RelativeLayout>
+
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f0d0f2"
+     >
+    
+
+    <TextView
+        android:id="@+id/tv_writedream_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/writetitle" />
+
+    <EditText
+        android:id="@+id/et_writedream_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_writedream_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/bt_writedream_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:text="@string/upload" />
+
+</RelativeLayout> -->

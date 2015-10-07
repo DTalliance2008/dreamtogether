@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<EditText
+	    android:id="@+id/et_writenote_title"
+	    android:layout_width="300dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="50dp"
+	    android:background="@drawable/red"
+	    android:ems="10"
+	    android:hint="请输入此时的心情"
+	    android:textSize="15sp" >
+
+	    <requestFocus />
+	</EditText>
+
+	<EditText
+	    android:id="@+id/et_writenote_mood"
+	    android:layout_width="310dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:background="@null"
+	    android:ems="10"
+	    android:hint="记录你的追梦"
+	    android:textSize="15sp" />
+
+	<EditText
+	    android:id="@+id/et_writenote_content"
+	    android:layout_width="310dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginBottom="59dp"
+	    android:background="@null"
+	    android:ems="10"
+	    android:hint="请输入日记标题"
+	    android:textSize="15sp" />
+
+</RelativeLayout> -->
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3cbaed"    
+    >
+<!-- 日记标题    --> 
+     <EditText 
+        android:id="@+id/bt_notewrite_title"
+        android:background="@drawable/notewrite_background_bt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColor="#666666"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_alignParentTop="true" 
+    	android:hint="添加标题。。。"    
+        />  
+<!-- 编写日记 -->
+ <EditText 
+        android:id="@+id/et_notewrite_note"
+        android:background="@drawable/notebg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"        
+        android:gravity="top"
+        android:textSize="16sp"
+        android:textColor="#990066"
+        android:layout_below="@+id/bt_notewrite_title"
+        android:layout_above="@+id/bt_notewrite_ulphoto"
+        android:layout_marginTop="5dp"
+    	android:hint="记录我的奔跑路程。。。"
+     />
+<!--   上传照片界面  -->
+    <Button 
+        android:id="@+id/bt_notewrite_ulphoto"
+        android:background="@drawable/notewrite_background_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ffffcc"
+        android:text="上传图片"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"        
+    	android:layout_marginTop="5dp"
+        />
+  <!--   更改背景按钮    -->   
+  <Button 
+        android:id="@+id/bt_notewrite_background"
+        android:background="@drawable/notewrite_background_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ffffcc"
+        android:text="更换背景"
+        android:layout_toLeftOf="@+id/bt_notewrite_ulphoto"
+        android:layout_alignParentBottom="true"        
+    	android:layout_marginTop="5dp"
+        />
+ <!-- 选择心情按钮 -->     
+     <Button 
+        android:id="@+id/bt_notewrite_mood"
+        android:background="@drawable/notewrite_background_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ffffcc"
+        android:text="选择心情"
+        android:layout_toLeftOf="@+id/bt_notewrite_background"
+        android:layout_alignParentBottom="true"        
+    	android:layout_marginTop="5dp"
+        />
+
+</RelativeLayout>
+
+
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+>>>>>>> origin/master
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<EditText
+	    android:id="@+id/et_writenote_title"
+	    android:layout_width="300dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginTop="50dp"
+	    android:background="@null"
+	    android:ems="10"
+	    android:hint="请输入此时的心情"
+	    android:textSize="15sp" >
+
+	    <requestFocus />
+	</EditText>
+
+	<EditText
+	    android:id="@+id/et_writenote_mood"
+	    android:layout_width="310dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:background="@null"
+	    android:ems="10"
+	    android:hint="记录你的追梦"
+	    android:textSize="15sp" />
+
+	<EditText
+	    android:id="@+id/et_writenote_content"
+	    android:layout_width="310dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_marginBottom="59dp"
+	    android:background="@null"
+	    android:ems="10"
+	    android:hint="请输入日记标题"
+	    android:textSize="15sp" />
+
+</RelativeLayout>
+<<<<<<< HEAD
+=======
+ -->

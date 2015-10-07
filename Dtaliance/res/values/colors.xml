@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="transparent_background">#00000000</drawable>
+	<drawable name="red">#FF0000</drawable>
+	<drawable name="black">#000000</drawable>
+	
+	<color name="transparent_background">#00000000</color>
+	<color name="red">#FF0000</color>
+	<color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+	<color name="blue">#0099FF</color>
+	<color name="dark_blue">#3399CC	</color>
+	<color name="transparent"> #B0000000 </color>
+	<color name="green">#BBFF00</color>
+	<color name="pink">#FFC0CB</color>
+	<color name="violet">#EE82EE</color>
+	<color name="gold">#FFD700</color>
+	<color name="goldenrod">#DAA520</color>
+</resources>

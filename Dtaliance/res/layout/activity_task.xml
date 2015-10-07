@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/task_background" >
+
+    <RelativeLayout
+        android:id="@+id/task_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/task_background_div"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/tv_task_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="你的梦想："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_task_tittlecontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_task_tittle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/task_background_edittext"
+            android:hint="请输入梦想内容"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+        <!-- 任务一 -->
+
+        <Button
+            android:id="@+id/bt_task_lineone"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/et_task_tittlecontent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_line" />
+
+        <TextView
+            android:id="@+id/tv_task_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_task_lineone"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="增加完成梦想所需要的任务"
+            android:textColor="#ff0033"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_task_linetwo"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_task_alert"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/task_background_line" />
+
+        <TextView
+            android:id="@+id/tv_task_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_task_linetwo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="任务一"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_task_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_task_one"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/task_background_edittext"
+            android:hint="请输入任务一内容"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_task_priorityone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_task_one"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务权重:"
+            android:textColor="#ff6666"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_task_priorityone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_task_one"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/tv_task_priorityone"
+            android:background="@drawable/task_background_edittext"
+            android:hint="100分制"
+            android:inputType="number"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_task_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/et_task_priorityone"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_line" />
+        <!-- 任务二 -->
+
+        <TextView
+            android:id="@+id/tv_task_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_task_line"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:text="任务二"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_task_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_task_two"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/task_background_edittext"
+            android:hint="请输入任务二内容"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_task_prioritytwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_task_two"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务权重"
+            
+            android:textColor="#ff6666"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_task_prioritytwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_task_two"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/tv_task_prioritytwo"
+            android:background="@drawable/task_background_edittext"
+            android:hint="100分制"
+            android:inputType="number"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_task_linethree"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/et_task_prioritytwo"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_line" />
+
+        <!-- 任务三 -->
+
+        <TextView
+            android:id="@+id/tv_task_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_task_linethree"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:text="任务三"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_task_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_task_three"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/task_background_edittext"
+            android:hint="请输入任务三内容"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_task_prioritythree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_task_three"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="任务权重"
+            android:textColor="#ff6666"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_task_prioritythree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_task_three"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/tv_task_prioritythree"
+            android:background="@drawable/task_background_edittext"
+            android:hint="100分制"
+            android:inputType="number"
+            android:textSize="14sp" />
+
+        <!-- 确认button -->
+
+        <Button
+            android:id="@+id/bt_task_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_task_prioritythree"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_bt"
+            android:text="完成" />
+    </RelativeLayout>
+
+</RelativeLayout>

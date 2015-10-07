@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/mydream_light"    
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MydreamActivity" >
+
+   <Button 
+        
+        android:id="@+id/bt_dreamtree_terminal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mydream_background_bt"
+        android:layout_marginLeft="-20dp"
+        android:gravity="top"
+        android:textSize="16sp"
+        android:textColor="#990066"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:text="最终梦想：创立一家公司"
+     />
+    <Button 
+        
+        android:id="@+id/bt_dreamtree_middle"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-20dp"
+        android:background="@drawable/mydream_background_bt"
+        android:gravity="top"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="#990066"
+        android:layout_below="@+id/bt_dreamtree_terminal"
+        android:layout_toLeftOf="@+id/bt_dreamtree_terminal"
+        android:layout_centerHorizontal="true"
+        android:text="中期梦想：做一款产品"
+     />
+   <Button 
+        
+        android:id="@+id/bt_dreamtree_first"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mydream_background_bt"
+        android:gravity="top"
+        android:layout_marginRight="-20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="#990066"
+        android:layout_toLeftOf="@+id/bt_dreamtree_middle"
+        android:layout_below="@+id/bt_dreamtree_middle"
+        android:text="最初梦想：学会UI设计"
+     />
+
+   
+</RelativeLayout>

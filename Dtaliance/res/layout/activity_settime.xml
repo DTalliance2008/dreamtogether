@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+<Button
+    android:id="@+id/bt_timeset1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  	android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="18dp"
+    android:layout_marginTop="210dp"
+    android:text="添加" />
+
+<Button
+    android:id="@+id/bt_timeset2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginRight="18dp"
+    android:layout_marginTop="210dp"
+    android:text="设置" />
+
+<TextView
+    android:id="@+id/tv_time_timeset1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/bt_timeset1"
+    android:layout_marginTop="60dp"
+    android:layout_marginLeft="20dp"
+    android:text="8:00" />
+
+<TextView
+    android:id="@+id/tv_time_timeset2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_time_timeset1"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="50dp"
+    android:text="12:00" />
+
+<TextView
+    android:id="@+id/tv_time_timeset3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_time_timeset2"
+    android:layout_marginTop="50dp"
+    android:layout_marginLeft="20dp"
+    android:text="18:00" />
+<TextView
+    android:id="@+id/tv_title_timeset1"
+    android:layout_width="wrap_content"
+    android:layout_height="39px"
+    android:layout_alignLeft="@+id/tv_title_timeset2"
+    android:layout_below="@+id/bt_timeset2"
+    android:layout_marginTop="60dp"
+    android:text="清早加油" />
+
+<TextView
+    android:id="@+id/tv_title_timeset2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/tv_time_timeset2"
+    android:layout_alignBottom="@+id/tv_time_timeset2"
+    android:layout_centerHorizontal="true"
+    android:text="下午加油" />
+
+
+
+<TextView
+    android:id="@+id/tv_title_timeset3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     
+    android:layout_alignBaseline="@+id/tv_time_timeset3"
+    android:layout_alignBottom="@+id/tv_time_timeset3"
+    android:layout_alignLeft="@+id/tv_title_timeset2"
+    android:text="晚上加油" />
+
+
+
+</RelativeLayout>

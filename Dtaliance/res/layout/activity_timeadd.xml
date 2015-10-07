@@ -1,0 +1,298 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/task_background" >
+
+    <RelativeLayout
+        android:id="@+id/rl_timeadd_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/task_background_div"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/tv_timeadd_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="提醒主题"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_timeadd_tittlecontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_timeadd_tittle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/task_background_edittext"
+            android:hint="请输入提醒主题"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+        <!-- 提醒时钟选择一 -->
+
+        <Button
+            android:id="@+id/bt_timeadd_lineone"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/et_timeadd_tittlecontent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_line" />
+
+        <TextView
+            android:id="@+id/tv_timeadd_alerttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_timeadd_lineone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="提醒时间："
+            android:textColor="#ff6666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/et_timeadd_clock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_timeadd_lineone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/tv_timeadd_alerttime"
+            android:background="@drawable/task_background_edittext"
+            android:gravity="center"
+            android:text="11:11"
+            android:textColor="#ff6666"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_timeadd_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/et_timeadd_clock"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_line" />
+
+        <!-- 提醒时间选择一 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_timeadd_timechoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_timeadd_line" >
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:text="重复:"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeat"
+                android:text="@string/single"
+                android:textColor="#ffccff"
+                android:textSize="18sp" />
+
+            <!-- 重复情况 -->
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatonce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_timeadd_timerepeat"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/single"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatworkday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeat"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatonce"
+                android:text="工作日"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatweekday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeat"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatworkday"
+                android:text="周末"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeateveryday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeat"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatweekday"
+                android:text="每天"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <!-- 星期一到七选择 -->
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatsunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_timeadd_timerepeatonce"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="周日"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatmonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeatonce"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatsunday"
+                android:text="周一"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeattuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeatonce"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatmonday"
+                android:text="周二"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatwednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeatonce"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeattuesday"
+                android:text="周三"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatthursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeatonce"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatwednesday"
+                android:text="周四"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatfriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeatonce"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatthursday"
+                android:text="周五"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_timeadd_timerepeatsaterday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_timeadd_timerepeatonce"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_timeadd_timerepeatfriday"
+                android:textColor="@color/blue"
+                android:text="周六"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_timeadd_linetwo"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/rl_timeadd_timechoose"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_line" />
+
+        <TextView
+            android:id="@+id/tv_timeadd_musicchoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_timeadd_linetwo"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="选择提醒音乐："
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_timeadd_music"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_timeadd_linetwo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/tv_timeadd_musicchoose"
+            android:background="@drawable/task_background_edittext"
+            android:gravity="center"
+            android:text="张三你好"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_timeadd_linethree"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_timeadd_music"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_line" />
+
+        <!-- 确认button -->
+
+        <Button
+            android:id="@+id/bt_timeadd_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_timeadd_linethree"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/task_background_bt"
+            android:text="完成" />
+    </RelativeLayout>
+
+</RelativeLayout>

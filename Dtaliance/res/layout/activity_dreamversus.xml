@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/dream_background"
+    tools:context=".DreamversusActivity" >
+    
+     <!--横线一 -->   
+    <TextView 
+    		android:id="@+id/tv_dreamversus_line"
+    		android:layout_width="match_parent"
+    		android:layout_height="2dp"
+    		android:layout_marginTop="5dp"
+    	  	android:background="@drawable/dreamversus_line"     		
+       		android:layout_above="@+id/tv_dreamversus_myicon"   />
+    
+    
+<!-- 自己 -->      
+    <TextView 
+    android:id="@+id/tv_dreamversus_myicon"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/dream_myicon"
+    android:layout_above="@+id/tv_dreamversus_lineone" 
+        />
+     <TextView 
+    android:id="@+id/tv_dreamversus_myprogress"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginBottom="25dp"
+    android:background="@drawable/dreamversus_tv"
+    android:layout_above="@+id/tv_dreamversus_lineone" 
+    android:layout_toRightOf="@+id/tv_dreamversus_myicon"
+    android:text="67%"
+        />
+      <!--横线一 -->   
+    <TextView 
+    		android:id="@+id/tv_dreamversus_lineone"
+    		android:layout_width="match_parent"
+    		android:layout_height="2dp"
+    		android:layout_marginTop="5dp"
+    	  	android:background="@drawable/dreamversus_line"     		
+       		android:layout_above="@+id/tv_dreamversus_taskone"   />
+   <!--任务一一 -->     
+   
+    <TextView 
+        android:id="@+id/tv_dreamversus_taskone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ff6666"
+        android:text="任务二完成：:"
+        android:layout_above="@+id/tv_dreamversus_tasktwo" 
+    	android:layout_marginTop="10dp"
+    	
+        />
+   <TextView 
+    		android:id="@+id/tv_dreamversus_proone"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/dreamversus_tv" 
+    		android:textSize="14sp"
+    		android:layout_above="@+id/tv_dreamversus_tasktwo"    
+ 			android:layout_alignParentRight="true"
+    		android:layout_toRightOf="@id/tv_dreamversus_taskone"
+    		android:text="34%"
+    		android:layout_marginTop="3dp"
+    		/>  
+    
+<!--任务二一 -->     
+   
+    <TextView 
+        android:id="@+id/tv_dreamversus_tasktwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ff6666"
+        android:text="任务二完成：:"
+        android:layout_above="@+id/tv_dreamversus_taskthree" 
+    	android:layout_marginTop="10dp"
+    	
+        />
+   <TextView 
+    		android:id="@+id/tv_dreamversus_protwo"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/dreamversus_tv" 
+    		android:textSize="14sp"
+    		android:layout_above="@+id/tv_dreamversus_taskthree"    
+ 			android:layout_alignParentRight="true"
+    		android:layout_toRightOf="@id/tv_dreamversus_tasktwo"
+    		android:text="34%"
+    		android:layout_marginTop="3dp"
+    		/>  
+   
+<!--任务三一 -->     
+   
+    <TextView 
+        android:id="@+id/tv_dreamversus_taskthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ff6666"
+        android:text="任务三完成：:"
+        android:layout_above="@+id/tv_dreamversus_linetwo" 
+    	android:layout_marginTop="10dp"
+    	
+        />
+   <TextView 
+    		android:id="@+id/tv_dreamversus_prothree"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/dreamversus_tv" 
+    		android:textSize="14sp"
+    		android:layout_above="@+id/tv_dreamversus_linetwo"    
+ 			android:layout_alignParentRight="true"
+    		android:layout_toRightOf="@id/tv_dreamversus_taskthree"
+    		android:text="6%"
+    		android:layout_marginTop="3dp"
+    		/>
+ <!--横线一 -->   
+    <TextView 
+    		android:id="@+id/tv_dreamversus_linetwo"
+    		android:layout_width="match_parent"
+    		android:layout_height="2dp"
+    		android:layout_marginTop="5dp"
+    	  	android:background="@drawable/dreamversus_line"     		
+       		android:layout_above="@+id/tv_dreamversus_enemy"  
+    		    		/>  
+   
+ <!-- 对手 -->    
+   <TextView 
+    android:id="@+id/tv_dreamversus_enemy"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_above="@+id/tv_dreamversus_linethree"    
+    android:layout_alignParentRight="true"
+    android:background="@drawable/dream_enemy"
+        />
+    <TextView 
+    android:id="@+id/tv_dreamversus_enemyprogress"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginBottom="25dp"
+    android:background="@drawable/dreamversus_tv"
+    android:layout_toLeftOf="@+id/tv_dreamversus_enemy"
+    android:layout_above="@+id/tv_dreamversus_linethree"    
+    android:text="67%"></TextView>
+<!--横线一 -->   
+    <TextView 
+    		android:id="@+id/tv_dreamversus_linethree"
+    		android:layout_width="match_parent"
+    		android:layout_height="2dp"
+    	  	android:background="@drawable/dreamversus_line"     		
+       		android:layout_above="@+id/tv_dreamversus_enemyproone"  
+    		    		/>
+
+   <!--对手任务一 -->    
+      <TextView 
+    		android:id="@+id/tv_dreamversus_enemyproone"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/dreamversus_tv" 
+    		android:layout_marginTop="5dp"
+    		android:textSize="14sp"    	
+    		android:layout_alignParentLeft="true"
+    		android:layout_toLeftOf="@+id/tv_dreamversus_enemytaskone"   
+    		android:layout_above="@+id/tv_dreamversus_enemytasktwo"  
+    		android:text="55%"
+    	
+    		/>
+  <TextView 
+        android:id="@+id/tv_dreamversus_enemytaskone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="14sp"
+        android:textColor="#ff6666"
+        android:text="：任务一完成"
+        android:layout_above="@+id/tv_dreamversus_enemyprotwo"   
+        android:layout_alignParentRight="true" 
+       	android:layout_marginTop="10dp"
+    	
+        /> 
+    
+  <!--对手任务二 -->  
+      
+    
+    
+     <TextView 
+    		android:id="@+id/tv_dreamversus_enemyprotwo"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/dreamversus_tv" 
+    		android:layout_marginTop="10dp"
+    		android:textSize="14sp"    	
+    		android:layout_alignParentLeft="true"
+    		android:layout_toLeftOf="@+id/tv_dreamversus_enemytasktwo"   
+    		android:layout_above="@+id/tv_dreamversus_enemytaskthree"  
+    		android:text="28%"
+    	
+    		/>
+  <TextView 
+        android:id="@+id/tv_dreamversus_enemytasktwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ff6666"
+        android:text="：任务二完成"
+        android:layout_above="@+id/tv_dreamversus_enemyprothree"   
+        android:layout_alignParentRight="true" 
+       	android:layout_marginTop="10dp"
+    	
+        /> 
+  <!--对手任务三 -->  
+    
+   <TextView 
+    		android:id="@+id/tv_dreamversus_enemyprothree"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/dreamversus_tv" 
+    		android:textSize="14sp"
+    		android:layout_alignParentBottom="true"
+    		android:layout_alignParentLeft="true"
+    		android:layout_toLeftOf="@+id/tv_dreamversus_enemytaskthree"    		
+    		android:text="8%"
+    		android:layout_marginTop="10dp"
+    		/>
+  <TextView 
+        android:id="@+id/tv_dreamversus_enemytaskthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="#ff6666"
+        android:text="：任务三完成"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"        
+       	android:layout_marginTop="10dp"
+    	
+        />  
+    
+</RelativeLayout>

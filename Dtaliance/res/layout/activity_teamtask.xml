@@ -1,0 +1,426 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/task_background"
+   >
+
+     <!--横线一 -->   
+    <TextView 
+    		android:id="@+id/tv_teamtask_line"
+    		android:layout_width="match_parent"
+    		android:layout_height="2dp"
+    		android:layout_marginTop="5dp"
+    	  	android:background="@drawable/homepage_line"     		
+       		  />
+    <!--头像一 -->   
+ <ImageButton 
+    android:id="@+id/ib_teamtask_myicon"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_below="@+id/tv_teamtask_line" 
+        />
+     <TextView 
+    android:id="@+id/tv_teamtask_teamname"
+    android:layout_width="match_parent"
+    android:layout_height="25dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:textSize="18sp"
+    android:layout_toRightOf="@+id/ib_teamtask_myicon"
+    android:layout_below="@+id/tv_teamtask_line" 
+    android:text="宇宙第一团队"
+        />
+<TextView 
+    android:id="@+id/tv_teamtask_teamtaskpro"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:textSize="16sp"
+    android:layout_toRightOf="@+id/ib_teamtask_myicon"
+    android:layout_below="@+id/tv_teamtask_teamname" 
+    android:text="任务进度："
+        />
+<TextView 
+    android:id="@+id/tv_teamtask_teamtaskprogress"
+    android:background="@drawable/homepage_tv"
+    android:layout_width="match_parent"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:layout_marginRight="5dp" 
+    android:layout_marginTop="10dp"    
+    android:layout_height="20dp"
+    android:textSize="16sp"
+    android:textColor="#ff9900"
+    android:layout_toRightOf="@+id/tv_teamtask_teamtaskpro"
+    android:layout_below="@+id/tv_teamtask_teamname" 
+    android:text="66%"
+        />
+
+  <!--横线一 -->   
+    <TextView 
+    		android:id="@+id/tv_teamtask_lineone"
+    		android:layout_width="match_parent"
+    		android:layout_height="2dp"
+    		android:layout_marginTop="5dp"
+    		android:layout_below="@+id/ib_teamtask_myicon"
+    	  	android:background="@drawable/homepage_line"  />
+    
+  <!--最终梦想任务  最终梦想任务 最终梦想任务  最终梦想任务   最终梦想任务  最终梦想任务 最终梦想任务  最终梦想任务最终梦想任务  最终梦想任务 最终梦想任务  最终梦想任务最终梦想任务  最终梦想任务 最终梦想任务  最终梦想任务 -->       
+    <RelativeLayout 
+        android:id="@+id/rl_teamtask_teamterminaldream"
+    	android:layout_width="match_parent"
+  	    android:layout_height="wrap_content" 
+  	    android:layout_marginTop="5dp"
+  	    android:layout_below="@+id/tv_teamtask_lineone"
+  	    android:background="@drawable/teamtask_background_div"
+  	    android:paddingTop="5dp"
+  	    android:paddingBottom="5dp"
+        >
+        
+        <TextView 
+    android:id="@+id/tv_teamtask_teamterminaldream"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:text="最终梦想："
+    android:textSize="18sp"
+    android:gravity="center"
+        />
+      
+        
+         <TextView 
+    android:id="@+id/tv_teamtask_terminalcontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/tv_teamtask_teamterminaldream"
+    android:text="变得嘎嘎牛逼"
+    android:textColor="#0099cc"
+    android:textSize="18sp"
+    android:gravity="center"        />        
+<!--        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线  -->
+          <TextView 
+    		android:id="@+id/tv_teamtask_linetwo"
+    		android:layout_width="match_parent"
+    		android:layout_height="4dp"
+    		android:layout_marginTop="2dp"
+    		android:layout_marginLeft="20dp"
+    		android:layout_marginRight="20dp"
+    		android:layout_below="@+id/tv_teamtask_terminalcontent"
+    	  	android:background="@drawable/homepage_line"  />
+     <TextView 
+    android:id="@+id/tv_teamtask_terminalone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_linetwo" 
+    android:text="任务一："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_terminalonecontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_linetwo" 
+    android:layout_toRightOf="@+id/tv_teamtask_terminalone"    
+    android:text="吃完一天的饭"
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_terminaltwo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_terminalone" 
+    android:text="任务二："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_terminaltwocontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_toRightOf="@+id/tv_teamtask_terminaltwo"
+    android:layout_below="@+id/tv_teamtask_terminalonecontent" 
+    android:text="没事别溜达那是干啥"
+        />
+     
+  <TextView 
+    android:id="@+id/tv_teamtask_terminalthree"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_terminaltwo" 
+    android:text="任务三："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_terminalthreecontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_toRightOf="@+id/tv_teamtask_terminalthree"
+    android:layout_below="@+id/tv_teamtask_terminaltwocontent" 
+    android:text="吃掉三个包子干掉一帮人那是很好的 "    
+        />     
+        
+    </RelativeLayout>
+    
+  <!--中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想中期梦想 -->       
+    <RelativeLayout 
+        android:id="@+id/rl_teamtask_middledream"
+    	android:layout_width="match_parent"
+  	    android:layout_height="wrap_content" 
+  	    android:layout_marginTop="5dp"
+  	    android:layout_below="@+id/rl_teamtask_teamterminaldream"
+  	    android:background="@drawable/teamtask_background_div"
+  	    android:paddingTop="5dp"
+  	    android:paddingBottom="5dp"
+        >
+        
+        <TextView 
+    android:id="@+id/tv_teamtask_middledream"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:text="中期梦想："
+    android:textSize="18sp"
+    android:gravity="center"
+        />
+      
+        
+         <TextView 
+    android:id="@+id/tv_teamtask_middlecontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/tv_teamtask_middledream"
+    android:text="开一间超市"
+    android:textColor="#0099cc"
+    android:textSize="18sp"
+    android:gravity="center"        />        
+<!--        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线  -->
+          <TextView 
+    		android:id="@+id/tv_teamtask_linethree"
+    		android:layout_width="match_parent"
+    		android:layout_height="4dp"
+    		android:layout_marginTop="2dp"
+    		android:layout_marginLeft="20dp"
+    		android:layout_marginRight="20dp"
+    		android:layout_below="@+id/tv_teamtask_middlecontent"
+    	  	android:background="@drawable/homepage_line"  />
+     <TextView 
+    android:id="@+id/tv_teamtask_middleone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_linethree" 
+    android:text="任务一："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_middleonecontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_linethree" 
+    android:layout_toRightOf="@+id/tv_teamtask_middleone"    
+    android:text="卖吧无本数数"
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_middletwo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_middleonecontent" 
+    android:text="任务二："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_middletwocontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_toRightOf="@+id/tv_teamtask_middletwo"
+    android:layout_below="@+id/tv_teamtask_middleonecontent" 
+    android:text="消灭隔壁老板娘"
+        />
+     
+  <TextView 
+    android:id="@+id/tv_teamtask_middlethree"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_middletwo" 
+    android:text="任务三："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_middlethreecontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_toRightOf="@+id/tv_teamtask_middlethree"
+    android:layout_below="@+id/tv_teamtask_middletwocontent" 
+    android:text="不知道干涉什么 就是干"    
+        />     
+        
+    </RelativeLayout>
+    
+   <!--初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              初级梦想              -->       
+    <RelativeLayout 
+        android:id="@+id/rl_teamtask_firstdream"
+    	android:layout_width="match_parent"
+  	    android:layout_height="wrap_content" 
+  	    android:layout_marginTop="5dp"
+  	    android:layout_below="@+id/rl_teamtask_middledream"
+  	    android:background="@drawable/teamtask_background_div"
+  	    android:paddingTop="5dp"
+  	    android:paddingBottom="5dp"
+        >
+        
+        <TextView 
+    android:id="@+id/tv_teamtask_firstdream"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:text="初级梦想："
+    android:textSize="18sp"
+    android:gravity="center"
+        />
+      
+        
+         <TextView 
+    android:id="@+id/tv_teamtask_firstdreamcontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/tv_teamtask_firstdream"
+    android:text="交个女朋友"
+    android:textColor="#0099cc"
+    android:textSize="18sp"
+    android:gravity="center"        />        
+<!--        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线        横线       横线       横线       横线       横线  -->
+          <TextView 
+    		android:id="@+id/tv_teamtask_linefour"
+    		android:layout_width="match_parent"
+    		android:layout_height="4dp"
+    		android:layout_marginTop="2dp"
+    		android:layout_marginLeft="20dp"
+    		android:layout_marginRight="20dp"
+    		android:layout_below="@+id/tv_teamtask_firstdreamcontent"
+    	  	android:background="@drawable/homepage_line"  />
+     <TextView 
+    android:id="@+id/tv_teamtask_firstdreamtaskone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_linefour" 
+    android:text="任务一："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_firstonecontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_linefour" 
+    android:layout_toRightOf="@+id/tv_teamtask_firstdreamtaskone"    
+    android:text="买一身西装"
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_firstdreamtasktwo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_firstdreamtaskone" 
+    android:text="任务二："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_firsttwocontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_toRightOf="@+id/tv_teamtask_firstdreamtasktwo"
+    android:layout_below="@+id/tv_teamtask_firstonecontent" 
+    android:text="买一双鞋"
+        />
+     
+  <TextView 
+    android:id="@+id/tv_teamtask_firstdreamtaskthree"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_below="@+id/tv_teamtask_firstdreamtasktwo" 
+    android:text="任务三："
+        />
+      <TextView 
+    android:id="@+id/tv_teamtask_firstthreecontent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:singleLine="true"
+    android:ellipsize="end"    
+    android:textSize="16sp"
+    android:textColor="#ff6666"
+    android:layout_toRightOf="@+id/tv_teamtask_firstdreamtaskthree"
+    android:layout_below="@+id/tv_teamtask_firsttwocontent" 
+    android:text="找到学姐电话号码"    
+        />     
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

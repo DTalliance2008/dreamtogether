@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/cd_listview"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:descendantFocusability="blocksDescendants"
+	xmlns:android="http://schemas.android.com/apk/res/android" >
+<TextView
+	android:id="@+id/tvleft1"
+	android:layout_width="110dp"
+	android:layout_height="60dp"
+	android:layout_x="10dp"
+	android:layout_y="10dp"
+	android:focusable="false" />
+<TextView
+	android:id="@+id/tvmid1"
+	android:layout_width="110dp"
+	android:layout_height="120dp"
+	android:gravity="center"
+	android:layout_x="125dp"
+	android:layout_y="10dp" />
+<TextView
+	android:id="@+id/tvright1"
+	android:layout_width="110dp"
+	android:layout_height="110dp"
+	android:gravity="center"
+	android:layout_x="240dp"
+	android:layout_y="10dp" />
+	
+	
+<TextView
+	android:id="@+id/tvleft2"
+	android:layout_width="110dp"
+	android:layout_height="120dp"
+	android:gravity="center"
+	android:layout_x="10dp"
+	android:layout_y="75dp" />
+<TextView
+	android:id="@+id/tvmid2"
+	android:layout_width="110dp"
+	android:layout_height="60dp"
+    android:layout_x="125dp"
+	android:layout_y="135dp" />
+<TextView
+	android:id="@+id/tvright2"
+	android:layout_width="110dp"
+	android:layout_height="110dp"
+	android:gravity="center"
+	android:layout_x="240dp"
+	android:layout_y="125dp" />
+<TextView
+	android:id="@+id/tvleft3"
+	android:layout_width="110dp"
+	android:layout_height="60dp"
+	android:layout_x="10dp"
+	android:layout_y="200dp" />
+<TextView
+	android:id="@+id/tvmid3"
+	android:layout_width="110dp"
+	android:layout_height="120dp"
+	android:gravity="center"
+	android:layout_x="125dp"
+	android:layout_y="200dp" />
+<TextView
+	android:id="@+id/tvright3"
+	android:layout_width="110dp"
+	android:layout_height="90dp"
+	android:gravity="center"
+	android:layout_x="240dp"
+	android:layout_y="240dp" />
+</AbsoluteLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    >
+  <solid android:color="#ccffff" />
+  
+    <!-- 设置圆角
+  注意：	bottomRightRadius是左下角而不是右下角  bottomLeftRadius右下角-->
+  
+<size android:width="20dp"
+          android:height="20dp" />
+   
+</shape>

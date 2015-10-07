@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">一七梦</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="create_dream_title">你还敢梦？</string>
+    <string name="phrase1">我不好也不坏,不特别出众,我只是敢不同</string>
+    <string name="phrase2">用左手去温暖右手，把痛苦当做快乐去欣赏，你才会成功！</string>
+    <string name="phrase3">今天的努力是为了给明天的幸福生活一个心安理得的理由！</string>
+    
+    <string name="inputname">输入用户名</string>
+    <string name="inputemail">输入邮箱</string>
+    <string name="inputpasswd">输入密码</string>
+    <string name="inputrepasswd">确定输入密码</string>
+    <string name="inputintroduce">输入简介</string>
+    <string name="confirm">确定</string>
+    
+    <string name="date">日期</string>
+	<string name="time">时间</string>
+	<string name="step">下一步</string>
+	<string name="writenote">写笔记</string>
+	<string name="titlenote">标题</string>
+	<string name="complete">完成</string>
+	<string name="save">记录</string>
+	<string name="back">back</string>
+	<string name="exit">exit</string>
+	<string name="quit">放弃</string>
+	<string name="setAlert">设置提醒</string>
+	
+	<string name="writetitle">写下share</string>
+	<string name="writeshare">write</string>
+    <string name="upload">up</string>
+    <string name="validateEmail">请输入正确的email地址</string>
+    <string name="connection">连接网络异常</string>
+    <string name="username">用户名</string>
+    <string name="sharecontent">分享内容</string>
+    <string name="writedream">分享梦想</string>
+    
+    <string name="persist">激励</string>
+    <string name="note">日记</string>
+    <string name="sharedream">分享</string>
+     <string name="notecontent">暗恋过惊鸿一瞥的少年，暗恋过互相斗气的同桌，暗恋过打球很帅的学长，暗恋过成熟魅力的大叔，甚至最近打算暗恋一个友邻，
+        当然像男藤井对女藤井这样深刻的暗恋我也经历过。也许每个人情窦初开的时候都会像男藤井一样纯真的闷骚过，我们的暗恋用电影表现出来可能也会像〈情书〉一样美好：雪景
+        美好，樱花美好，情书美好，初恋美好，柏原崇也很美好。那个倚在窗前看书，当风扬起白色的窗帘，身影若隐若现的少年，干净的像一幅画，叫人不忍打扰。可惜我不是导演，只能在
+        日记本上涂鸦着一个个暗恋的故事：今天他看了我一眼，他开始注意我了，心中窃喜；今天他和一个女孩子走的很近，有说有笑，很不高兴；今天下雨了，他在屋檐下躲雨，多想邀他共撑一把伞。
+        。。所以我多能明白男藤井的心情，我能想象他握笔的角度，写字的力度，倾慕的浓度，仿佛要把爱恋全都揉进“藤井树”这三个字里。 </string>
+
+     <string name="my">我的</string>
+     <string name="firstDream">最初梦想</string>
+     <string name="middleDream">中期梦想</string>
+     <string name="terminalDream">最终梦想</string>
+     <string name="single">单次</string>
+
+</resources>

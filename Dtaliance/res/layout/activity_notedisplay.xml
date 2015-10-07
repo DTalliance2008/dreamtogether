@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/notedisplay_background"
+   >
+<!-- 标题  置顶 及时间 -->
+<RelativeLayout    
+       android:id="@+id/rl_notedisplay_tittle"
+  	   android:layout_width="match_parent"
+       android:layout_height="wrap_content" 
+       android:background="@drawable/notedisplay_div"
+       android:padding="5dp"
+    >
+     <TextView
+        android:id="@+id/tv_notedisplay_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:text="陌上花开与君赏" />
+     <TextView
+        android:id="@+id/tv_notedisplay_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#cccccc"
+        android:textSize="13sp"
+        android:layout_below="@+id/tv_notedisplay_tittle"
+        android:text="11:11" />
+      <TextView
+        android:id="@+id/tv_notedisplay_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#cccccc"
+        android:textSize="13sp"
+        android:layout_below="@+id/tv_notedisplay_tittle"
+        android:layout_toRightOf="@+id/tv_notedisplay_time"
+        android:text="精心阅读899次" />
+      <Button
+        android:id="@+id/tv_notedisplay_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666699"
+        android:background="@drawable/notedisplay_bt"
+        android:layout_alignParentRight="true"
+        android:text="置顶" 
+           />
+      
+</RelativeLayout>
+   <TextView 
+        android:id="@+id/tv_notedisplay_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/notedisplay_line"
+        android:layout_below="@+id/rl_notedisplay_tittle"
+        />
+ <!-- 日记内容 -->  
+     <TextView
+        android:id="@+id/tv_notedisplay_note"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/notedisplay_tv"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#990066"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_notedisplay_line"
+        android:text="@string/notecontent" />
+
+ 
+<!-- 评论 -->  
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@drawable/remind"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    
+ <RelativeLayout 
+        android:id="@+id/rl_remind_reminddiv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" 
+        android:layout_marginTop="180dp"
+        android:background="@drawable/remind_div"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="10dp"
+           >
+     <Button 
+    		android:id="@+id/bt_remind_add"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:gravity="center"
+    		android:layout_marginTop="10dp"
+    		android:layout_marginLeft="40dp"
+    		android:text="添加"
+    	  	android:background="@drawable/remind_circle"     		
+       		 />
+      <Button 
+    		android:id="@+id/bt_remind_clear"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:gravity="center"
+    		android:layout_marginTop="10dp"
+    		android:layout_marginRight="40dp"
+    		android:layout_alignParentRight="true"
+    		android:text="清空"
+    	  	android:background="@drawable/remind_circle"     		
+       		 />
+ </RelativeLayout>
+    
+
+<RelativeLayout
+        android:id="@+id/rl_remind_clockdiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/rl_remind_reminddiv"
+        android:background="@drawable/remind_div"
+        android:paddingBottom="10dp"
+      
+     >
+    
+      <!--横线一 -->   
+    <TextView 
+    		android:id="@+id/tv_dreamversus_lineone"
+    		android:layout_width="match_parent"
+    		android:layout_height="3dp"
+    		android:layout_marginTop="10dp"
+    	  	android:background="@drawable/remind_line"     		
+       		  />
+   <!--任务一一 -->     
+   
+    <TextView 
+        android:id="@+id/tv_remind_clockone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#ff6666"
+        android:text="提醒任务一："
+        android:layout_below="@+id/tv_dreamversus_lineone" 
+    	android:layout_marginTop="10dp"
+    	
+        />
+   <TextView 
+    		android:id="@+id/tv_remind_clocktittleone"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/remind_tv" 
+    		android:textSize="16sp"
+    		android:layout_below="@+id/tv_dreamversus_lineone"     
+ 			android:layout_alignParentRight="true"
+    		android:layout_toRightOf="@id/tv_remind_clockone"
+    		android:text="起床啦别整没用的"
+    		android:layout_marginTop="10dp"
+    		/>  
+    
+<!--任务二一 -->     
+   
+    <TextView 
+        android:id="@+id/tv_remind_clocktwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#ff6666"
+        android:text="提醒任务二："
+        android:layout_below="@+id/tv_remind_clockone" 
+    	android:layout_marginTop="10dp"
+    	
+        />
+   <TextView 
+    		android:id="@+id/tv_remind_clocktittletwo"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/remind_tv" 
+    		android:textSize="16sp"
+    		android:layout_below="@+id/tv_remind_clocktittleone"    
+ 			android:layout_alignParentRight="true"
+    		android:layout_toRightOf="@id/tv_remind_clocktwo"
+    		android:text="赶紧滴别扯犊子"
+    		android:layout_marginTop="10dp"
+    		/>  
+   
+<!--任务三一 -->     
+   
+    <TextView 
+        android:id="@+id/tv_remind_clockthree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="#ff6666"
+        android:text="提醒任务三："
+        android:layout_below="@+id/tv_remind_clocktwo"
+        android:layout_toLeftOf="@id/tv_remind_clockthree"    
+    	android:layout_marginTop="10dp"
+    	
+        />
+   <TextView 
+    		android:id="@+id/tv_remind_clocktittlethree"
+    		android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    		android:background="@drawable/remind_tv" 
+    		android:textSize="16sp"
+    		android:layout_below="@+id/tv_remind_clocktittletwo"    
+ 			android:layout_alignParentRight="true"
+    		android:layout_toRightOf="@id/tv_remind_clockthree"    		
+    		android:text="收起你的梦想，你不行"
+    		android:layout_marginTop="10dp"
+    		/>
+    
+    
+    
+</RelativeLayout>
+    
+</RelativeLayout>
