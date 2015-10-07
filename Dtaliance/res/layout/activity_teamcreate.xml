@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textColor="#ff6666"
         android:text="选择团队LOGO:"
         android:layout_below="@id/et_teamcreate_teamname"
@@ -64,6 +64,7 @@
     		android:layout_height="wrap_content"
     	    android:layout_marginLeft="10dp"
     		android:layout_marginRight="10dp"
+    		android:layout_marginTop="2dp"
     		android:background="@drawable/teamcreate_circle" 
     		android:text="+"
     		android:textSize="20sp"
@@ -71,7 +72,6 @@
     		android:gravity="center"
     		android:layout_below="@id/et_teamcreate_teamname"
     		android:layout_toRightOf="@id/tv_teamcreate_logochoose"
-    		android:layout_marginTop="5dp"
     		android:inputType="number"/>
     
     <!-- 选择队友一 -->
@@ -79,7 +79,6 @@
       	android:id="@+id/bt_teamcreate_lineone"
       	android:layout_width="match_parent"
       	android:layout_height="2dp"
-      	android:layout_marginTop="5dp"
       	android:layout_below="@id/bt_teamcreate_logochoose"
       	android:background="@drawable/task_background_line" />
      
@@ -89,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textColor="#ff6666"
         android:text="选择队友:"
         android:layout_below="@id/bt_teamcreate_lineone"
@@ -104,19 +103,18 @@
     		android:layout_marginRight="10dp"
     		android:background="@drawable/teamcreate_circle" 
     		android:text="+"
+    		android:layout_marginTop="2dp"
     		android:textColor="#ff0000"
     		android:textSize="20sp"
     		android:gravity="center"
     		android:layout_below="@id/bt_teamcreate_lineone"
     		android:layout_toRightOf="@id/tv_teamcreate_teammatechoose"
-    		android:layout_marginTop="5dp"
     		android:inputType="number"/>
         <!-- 终极目标 -->
      <Button 
       	android:id="@+id/bt_teamcreate_linetwo"
       	android:layout_width="match_parent"
       	android:layout_height="2dp"
-      	android:layout_marginTop="5dp"
       	android:layout_below="@id/bt_teamcreate_teammatechoose"
       	android:background="@drawable/task_background_line" />
       <!-- 终极目标 -->
@@ -126,8 +124,21 @@
       	android:layout_height="wrap_content"
       	android:layout_marginLeft="10dp"
       	android:layout_below="@id/bt_teamcreate_linetwo"
-      	android:layout_marginTop="3dp"
+      	android:layout_marginTop="10dp"
       	android:text="团队最终梦想："
+      	android:textSize="18sp"
+      	/>
+       <Button 
+      	android:id="@+id/bt_teamcreate_tertaskadd"
+      	android:layout_width="wrap_content"
+      	android:layout_height="30dp"
+      	android:layout_marginLeft="10dp"
+      	android:layout_marginTop="5dp"
+      	android:textColor="#ff6666"
+      	android:background="@drawable/task_background_bt"
+      	android:layout_below="@id/bt_teamcreate_linetwo"
+      	android:layout_toRightOf="@id/tv_teamcreate_terminaldream"
+      	android:text="+添加任务"
       	android:textSize="18sp"
       	/>
       <EditText 
@@ -151,14 +162,28 @@
       	android:layout_marginTop="5dp"
       	android:layout_below="@id/et_teamcreate_terminaldream"
       	android:background="@drawable/task_background_line" />
+   
       <TextView 
       	android:id="@+id/tv_teamcreate_middledream"
       	android:layout_width="wrap_content"
       	android:layout_height="wrap_content"
       	android:layout_marginLeft="10dp"
       	android:layout_below="@id/bt_teamcreate_linethree"
-      	android:layout_marginTop="3dp"
+      	android:layout_marginTop="10dp"
       	android:text="团队中期梦想："
+      	android:textSize="18sp"
+      	/>
+          <Button 
+      	android:id="@+id/bt_teamcreate_midtaskadd"
+      	android:layout_width="wrap_content"
+      	android:layout_height="30dp"
+      	android:layout_marginLeft="10dp"
+      	android:layout_marginTop="5dp"
+      	android:textColor="#ff6666"
+      	android:background="@drawable/task_background_bt"
+      	android:layout_below="@id/bt_teamcreate_linethree"
+      	android:layout_toRightOf="@id/tv_teamcreate_middledream"
+      	android:text="+添加任务"
       	android:textSize="18sp"
       	/>
       <EditText 
@@ -192,6 +217,19 @@
       	android:text="团队初级梦想："
       	android:textSize="18sp"
       	/>
+       <Button 
+      	android:id="@+id/bt_teamcreate_firtaskadd"
+      	android:layout_width="wrap_content"
+      	android:layout_height="30dp"
+      	android:layout_marginLeft="10dp"
+      	android:layout_marginTop="5dp"
+      	android:textColor="#ff6666"
+      	android:background="@drawable/task_background_bt"
+      	android:layout_below="@id/bt_teamcreate_linefour"
+      	android:layout_toRightOf="@id/tv_teamcreate_firstdream"
+      	android:text="+添加任务"
+      	android:textSize="18sp"
+      	/>
       <EditText 
       	android:id="@+id/et_teamcreate_firstdream"
       	android:layout_width="match_parent"
@@ -201,9 +239,10 @@
     	android:textSize="14sp"
     	android:background="@drawable/task_background_edittext" 
     	android:layout_below="@id/tv_teamcreate_firstdream"
-      	android:layout_marginTop="3dp"
+      	android:layout_marginTop="10dp"
       	android:hint="请为团队设置初级梦想"
       	 />
+          
        <Button 
       	android:id="@+id/bt_teamcreate_linefive"
       	android:layout_width="match_parent"
@@ -213,7 +252,7 @@
       	android:background="@drawable/task_background_line" />
       <!-- 确认button -->
       <Button 
-      	android:id="@+id/bt_teamcreate_confirm"
+      	android:id="@+id/bt_task_confirm"
       	android:layout_width="wrap_content"
       	android:layout_height="wrap_content"
       	android:layout_below="@+id/bt_teamcreate_linefive"
