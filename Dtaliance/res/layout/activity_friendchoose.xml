@@ -5,12 +5,24 @@
    >
 
      <!--横线一 -->   
+     <SearchView 
+         android:id="@+id/sv_friendchoose_search"
+         android:layout_width="match_parent"
+    		android:layout_height="40dp"
+    		android:layout_marginTop="5dp"
+    		android:layout_marginLeft="5dp"
+    		android:layout_marginRight="5dp"
+    		android:textSize="16sp"
+            android:textColor="#ff9900"
+    		android:hint="用户名/手机号码/注册邮箱"
+         ></SearchView>
     <TextView 
     		android:id="@+id/tv_friendchoose_line"
     		android:layout_width="match_parent"
     		android:layout_height="2dp"
     		android:layout_marginTop="5dp"
-    	  	android:background="@drawable/homepage_line"     		
+    	  	android:background="@drawable/homepage_line"   
+    	  	android:layout_below="@id/sv_friendchoose_search"  		
        		  />
   <ListView 
      		android:id="@+id/lv_friendchoose_list"
