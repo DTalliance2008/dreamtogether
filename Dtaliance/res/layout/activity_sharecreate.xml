@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/task_background"
+   >
+
+<RelativeLayout
+    android:id="@+id/rl_sharecreate_div"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"  
+    android:paddingBottom="5dp"
+    android:background="@drawable/task_background_div"
+    android:orientation="vertical"
+     >
+    <!-- 晒梦内容                                    晒梦内容                                    晒梦内容                                    晒梦内容                                    晒梦内容                                    晒梦内容                                    晒梦内容                                    --> 
+    
+    
+     
+    <EditText 
+    		android:id="@+id/et_sharecreate_content"
+    		android:layout_width="match_parent"
+    		android:layout_height="100dp"
+    		android:layout_marginRight="10dp"
+    		android:background="@drawable/task_background_edittext" 
+    		android:hint="说点什么"
+    		android:textSize="16sp"
+    		android:gravity="start"
+    		android:layout_marginTop="3dp"
+    		android:inputType="text"/>
+    
+<!--     选择weizhi位置     选择weizhi位置     选择weizhi位置     选择weizhi位置     选择weizhi位置     选择weizhi位置     选择weizhi位置 -->
+  
+    
+    <TextView 
+        android:id="@+id/tv_sharecreate_locationchoose"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:text="位置："
+        android:layout_below="@id/et_sharecreate_content"
+    	android:layout_marginTop="10dp"
+    	
+        />
+      <Button 
+        android:id="@+id/bt_sharecreate_locationchoose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#ff6666"
+        android:background="@drawable/location"
+        android:layout_below="@id/et_sharecreate_content"
+        android:layout_toRightOf="@+id/tv_sharecreate_locationchoose"
+    	android:layout_marginTop="5dp"
+    	
+        />
+    
+    <!-- 提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁:提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁:提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁看:提醒谁看:一 -->
+     <Button 
+      	android:id="@+id/bt_sharecreate_lineone"
+      	android:layout_width="match_parent"
+      	android:layout_height="2dp"
+      	android:layout_marginTop="5dp"
+      	android:layout_below="@id/tv_sharecreate_locationchoose"
+      	android:background="@drawable/task_background_line" />
+     
+    
+    <TextView 
+        android:id="@+id/tv_sharecreate_remindchoose"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:text="提醒谁看:"
+        android:layout_below="@id/bt_sharecreate_lineone"
+    	android:layout_marginTop="5dp"
+    	
+        />
+    <Button 
+    		android:id="@+id/bt_sharecreate_remindchoose"
+    		android:layout_width="40dp"
+    		android:layout_height="40dp"
+    		android:layout_marginRight="10dp"
+    		android:background="@drawable/aite" 
+    		android:textColor="#ff0000"
+    		android:textSize="20sp"
+    		android:gravity="center"
+    		android:layout_below="@id/bt_sharecreate_lineone"
+    		android:layout_toRightOf="@id/tv_sharecreate_remindchoose"
+    		android:inputType="number"/>
+        <!-- hengxiang -->
+     <Button 
+      	android:id="@+id/bt_sharecreate_linetwo"
+      	android:layout_width="match_parent"
+      	android:layout_height="2dp"
+      	android:layout_below="@id/bt_sharecreate_remindchoose"
+      	android:background="@drawable/task_background_line" />
+      <TextView 
+        android:id="@+id/tv_sharecreate_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:text="谁可以看:"
+        android:layout_below="@id/bt_sharecreate_linetwo"
+    	android:layout_marginTop="5dp"
+    	
+        />
+    <Button 
+    		android:id="@+id/bt_sharecreate_permission"
+    		android:layout_width="40dp"
+    		android:layout_height="40dp"
+    		android:layout_marginRight="10dp"
+    		android:background="@drawable/home" 
+    		android:textColor="#ff0000"
+    		android:textSize="20sp"
+    		android:gravity="center"
+    		android:layout_below="@id/bt_sharecreate_linetwo"
+    		android:layout_toRightOf="@id/tv_sharecreate_permission"
+    		android:inputType="number"/>
+    
+</RelativeLayout>
+    
+    
+    
+
+</RelativeLayout>
