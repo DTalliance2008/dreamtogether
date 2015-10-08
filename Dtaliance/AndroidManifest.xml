@@ -74,6 +74,7 @@
         <activity android:name="com.dtaliance.TeamTaskActivity"></activity>
         <activity android:name="com.dtaliance.TaskDetailActivity"></activity>
         <activity android:name="com.dtaliance.FriendChooseActivity"></activity>
+        <activity android:name="com.dtaliance.TeamTaskAddActivity"></activity>
 
     </application>
 

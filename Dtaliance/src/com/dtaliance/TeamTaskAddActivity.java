@@ -2,14 +2,17 @@ package com.dtaliance;
 
 import java.util.HashMap;
 
-import com.dtaliance.util.ConstantUtil;
-
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.dtaliance.util.ConstantUtil;
+import com.dtaliance.util.SPUtil;
 
 public class TeamTaskAddActivity extends CompleteActivity{
 	private EditText titleNameEt;
@@ -17,6 +20,10 @@ public class TeamTaskAddActivity extends CompleteActivity{
 	private ListView roleLv;
 	private String dreamLevel;
 	private int taskLevel;
+	private String tag;
+	private static final String EDIT = "edit";
+	private static final String CREATE = "create";
+	@SuppressLint("UseSparseArrays")
 	private HashMap<Integer, String> task = new HashMap<Integer, String>();
  	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,25 @@ public class TeamTaskAddActivity extends CompleteActivity{
 		task.put(0, "one");
 		task.put(1, "two");
 		task.put(2, "three");
+		
+		if(dreamLevel != null && !dreamLevel.isEmpty()){
+			if(taskLevel != -1){
+				setDetail(dreamLevel, taskLevel);
+				tag = EDIT;
+			}else{
+				SharedPreferences sp = getApplicationContext().getSharedPreferences(dreamLevel, MODE_PRIVATE);
+				taskLevel = sp.getInt(ConstantUtil.TASK_COUNT, 0);
+				tag = CREATE;
+			}
+		} else {
+			Toast.makeText(getApplicationContext(), "系统错误", Toast.LENGTH_SHORT).show();
+			finish();
+		}
+	}
+	
+	public void setDetail(String dreamLevel, int taskLevel){
+		titleNameEt.setText((String)SPUtil.getString(getApplicationContext(), dreamLevel, task.get(taskLevel)));  
+		taskWeightEt.setText((String)SPUtil.getString(getApplicationContext(), dreamLevel, task.get(taskLevel) + "Prority"));  
 	}
 	
 	@Override
@@ -57,7 +83,10 @@ public class TeamTaskAddActivity extends CompleteActivity{
 	public void goReturn(){
 		SharedPreferences sp = getApplicationContext().getSharedPreferences(dreamLevel, MODE_PRIVATE);
 		Editor edit = sp.edit();
-		edit.putInt(ConstantUtil.TASK_COUNT, taskLevel);
+		if(CREATE.equals(tag)){
+			edit.putInt(ConstantUtil.TASK_COUNT, taskLevel + 1);
+		} 
+		
 		edit.putString(task.get(taskLevel), titleNameEt.getText().toString().trim());
 		edit.putString(task.get(taskLevel) + "Prority", taskWeightEt.getText().toString().trim()); 
 		edit.commit();
