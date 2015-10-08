@@ -52,9 +52,7 @@ public class TeamCreateActivity extends Activity{
 		
 	}
 	
-	public void goTeamTask(){
-		
-	}
+	public void goTeamTask(){}
 	
 	private void setPageDetail(EditText teamNameET) {
 //		SharedPreferences sp = getApplicationContext().getSharedPreferences(ConstantUtil.TEAM_DREAM, MODE_PRIVATE);

@@ -24,6 +24,7 @@ public class TeamDreamActivity extends Activity{
 		TextView middleDream = (TextView) findViewById(R.id.tv_teamdream_middledream);
 		TextView terminalDream = (TextView) findViewById(R.id.tv_teamdream_terminaldream);
 		TextView teamName = (TextView) findViewById(R.id.tv_teamdream_name);
+		TextView battleTeam = (TextView) findViewById(R.id.tv_teamdream_myteambattle);
 		
 		teamName.setText(SPUtil.getString(getApplicationContext(), ConstantUtil.TEAM_FIRST_LEVEL, ConstantUtil.TEAM_NAME));  
 		firstDream.setText(SPUtil.getString(getApplicationContext(), ConstantUtil.TEAM_FIRST_LEVEL, "title"));  
@@ -37,6 +38,19 @@ public class TeamDreamActivity extends Activity{
 				goTeamTask();
 			}
 		});
+		
+		battleTeam.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				goDreamVersus();
+			}
+		});
+	}
+	
+	public void goDreamVersus(){
+		Intent intent = new Intent(this, DreamVersusActivity.class);
+		startActivity(intent);
 	}
 	
 	public void goTeamTask(){

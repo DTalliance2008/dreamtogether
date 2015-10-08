@@ -9,12 +9,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -124,7 +126,13 @@ public class DTActivity extends ActionBarActivity implements TabListener, OnPage
 	public boolean onCreateOptionsMenu(Menu menu) {  
 	    MenuInflater inflater = getMenuInflater();  
 	    inflater.inflate(R.menu.main, menu);  
-	return super.onCreateOptionsMenu(menu);  
+	    MenuItem searchItem = menu.findItem(R.id.it_search); 
+	    SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem); 
+	    // Configure the search info and add any event listeners ... 
+	    
+	    
+	    
+	    return super.onCreateOptionsMenu(menu);  
 	}  
 	
 	@Override

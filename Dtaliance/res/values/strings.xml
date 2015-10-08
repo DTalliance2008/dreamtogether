@@ -51,5 +51,6 @@
      <string name="middleDream">中期梦想</string>
      <string name="terminalDream">最终梦想</string>
      <string name="single">单次</string>
+     <string name="search">search</string>
 
 </resources>
