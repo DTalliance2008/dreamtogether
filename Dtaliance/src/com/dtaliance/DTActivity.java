@@ -9,12 +9,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -136,9 +138,16 @@ public class DTActivity extends ActionBarActivity implements TabListener, OnPage
 		case R.id.set_alert:
 			goRemind();
 			return true;
+		case R.id.it_search:
+			goFriendChoose();
 		default:
 			return false;
 		}
+	}
+	
+	public void goFriendChoose(){
+		Intent intent = new Intent(this, FriendChooseActivity.class);
+		startActivity(intent);
 	}
 	
 	public void goWriteNote(){

@@ -14,7 +14,7 @@
     		android:layout_marginRight="5dp"
     		android:textSize="16sp"
             android:textColor="#ff9900"
-    		android:hint="用户名/手机号码/注册邮箱"
+            android:imeOptions="actionSearch" 
          ></SearchView>
     <TextView 
     		android:id="@+id/tv_friendchoose_line"

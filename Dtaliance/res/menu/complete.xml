@@ -3,6 +3,10 @@
 	<item 
 	    android:id="@+id/it_complete_achive"
 	    android:showAsAction="ifRoom|withText"
-	    android:title="@string/complete"/>    
+	    android:title="@string/complete"/>   
+	<item 
+	    android:id="@+id/it_co_search"
+	    android:actionViewClass="android.support.v7.widget.SearchView"
+	    android:title="search"/> 
 
 </menu>

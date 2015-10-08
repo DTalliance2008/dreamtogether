@@ -1,5 +1,7 @@
 package com.dtaliance;
 
+import java.util.Set;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,25 +11,40 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.dtaliance.util.ConstantUtil;
 import com.dtaliance.util.SPUtil;
 
 public class TeamCreateActivity extends Activity{
 	
+	private TextView teamNameTv;
+	private TextView firstDream;
+	private TextView middleDream;
+	private TextView terminalDream;
+	
+	private Button chooseMate;
+	private Button firstDreamTask;
+	private Button middleDreamTask;
+	private Button terminalDreamTask;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_teamcreate);
 		
-		final EditText teamNameTv = (EditText) findViewById(R.id.et_teamcreate_teamname);
+		teamNameTv = (EditText) findViewById(R.id.et_teamcreate_teamname);
 		
-		final EditText firstDream = (EditText) findViewById(R.id.et_teamcreate_firstdream);
-		final EditText middleDream = (EditText) findViewById(R.id.et_teamcreate_middledream);
-		final EditText terminalDream = (EditText) findViewById(R.id.et_teamcreate_terminaldream);
+		firstDream = (EditText) findViewById(R.id.et_teamcreate_firstdream);
+		middleDream = (EditText) findViewById(R.id.et_teamcreate_middledream);
+		terminalDream = (EditText) findViewById(R.id.et_teamcreate_terminaldream);
 		
-		Button chooseMate = (Button) findViewById(R.id.bt_teamcreate_teammatechoose);
+		firstDreamTask = (Button) findViewById(R.id.bt_teamcreate_firtaskadd);
+		middleDreamTask = (Button) findViewById(R.id.bt_teamcreate_midtaskadd);
+		terminalDreamTask = (Button) findViewById(R.id.bt_teamcreate_tertaskadd);
 		
+		chooseMate = (Button) findViewById(R.id.bt_teamcreate_teammatechoose);
+		Button chooseLogo = (Button) findViewById(R.id.bt_teamcreate_logochoose);
 		Button con = (Button) findViewById(R.id.bt_teamcreate_confirm);
 		
 		Intent intent = getIntent();
@@ -35,8 +52,52 @@ public class TeamCreateActivity extends Activity{
 		
 		if(teamDream != null){
 			teamNameTv.setText(teamDream);
-			getTeamDream(firstDream, middleDream, terminalDream);
+			getTeamDream();
 		}
+		firstDreamTask.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		middleDreamTask.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		terminalDreamTask.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		chooseMate.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(getApplication(), FriendChooseActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		chooseLogo.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		con.setOnClickListener(new OnClickListener() {
 			
@@ -83,7 +144,7 @@ public class TeamCreateActivity extends Activity{
 		edit.commit();
 	}
 	
-	public void getTeamDream(EditText firstDream, EditText middleDream, EditText terminalDream){
+	public void getTeamDream(){
 //		SharedPreferences sp = getApplicationContext().getSharedPreferences(ConstantUtil.TEAM_DREAM, MODE_PRIVATE);
 //		String l1 = sp.getString(ConstantUtil.TEAM_MIDDLE_LEVEL, ""); 
 //		String l2 = sp.getString(ConstantUtil.TEAM_TERMINAL_LEVEL, "");
@@ -93,7 +154,27 @@ public class TeamCreateActivity extends Activity{
 		firstDream.setText(SPUtil.getString(getApplicationContext(), ConstantUtil.TEAM_FIRST_LEVEL, "title")); 
 		middleDream.setText(SPUtil.getString(getApplicationContext(), ConstantUtil.TEAM_MIDDLE_LEVEL, "title"));
 		terminalDream.setText(SPUtil.getString(getApplicationContext(), ConstantUtil.TEAM_TERMINAL_LEVEL, "title")); 
+		
+		Set<String> name = SPUtil.getStringSet(getApplicationContext(), ConstantUtil.TEAM_INFO, ConstantUtil.TEAM_LEAGUER);
+		
+		StringBuffer sb = new StringBuffer();
+		for(String str : name){
+			sb.append(str);
+			sb.append("	");
+		}
+		chooseMate.setText(sb.toString());  
+		
+	}
+	@Override
+	protected void onResume() {
+		super.onResume();
+		getTeamDream();
 	}
 	
+	public void goTaskAdd(String dreamLevel){
+//		Intent intent = new Intent(this, TeamTaskAddActivity.class);
+//		intent.putExtra(ConstantUtil.DREAM_LEVEL, );
+//		intent.putExtra(ConstantUtil.TASK_LEVEL, );
+	}
 
 }

@@ -17,12 +17,6 @@ public class ConstantUtil {
 	public static final String EXTRA_SECOND = "extraSecond";
 	public static final Map<String, String> TEAM_CONTENT = new HashMap<String, String>();
 	public static final Map<String, String> MY_CONTENT = new HashMap<String, String>();
- 	//
-	static{
-//		TEAM_CONTENT.put(TEAM_NAME, arg1);
-//		TEAM_CONTENT.put(arg0, arg1);
-//		TEAM_CONTENT.put(arg0, arg1);
-	}
 	
 	//数据库表
 	public static final String TABLE_NAME = "tb_persist";//
@@ -65,6 +59,8 @@ public class ConstantUtil {
 	public static final String TASK_THREE_PRORITY = "threePrority";
 
 	public static final String DREAM_LEVEL = "dreamLevel";
+	public static final String TASK_LEVEL = "taskLevel";
+	public static final String TASK_COUNT = "taskCount";
 	public static final String FRIST_TITLE = "最初梦想";
 	public static final String MIDDLE_TITLE = "中期梦想";
 	public static final String TERMINAL_TITLE = "最终梦想";
@@ -87,5 +83,7 @@ public class ConstantUtil {
 	
 	//task
 	public static final String TASK_TITLE = "taskTitle";
-	
+	//team
+	public static final String TEAM_INFO = "teamInfo";
+	public static final String TEAM_LEAGUER = "teamLeaguer";	
 }
