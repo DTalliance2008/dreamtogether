@@ -1,28 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+      
+    >
+<RelativeLayout 
+    android:id="@+id/rl_sharelist_background"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+        >   
+   <TextView
+        android:id="@+id/tv_share_lineone"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/notedisplay_line"
 
+        />     
+    
     <TextView
-        android:id="@+id/tv_sharelist_username"
+        android:id="@+id/tv_sharelist_moodicon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/happy"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_share_lineone"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/sharelist_time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="29dp"
-        android:textSize="20dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/tv_sharelist_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/tv_sharelist_username"
-        android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_share_lineone"
+        android:typeface="monospace"        
+        android:text="11:11" />
+     <TextView
+        android:id="@+id/sharelist_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_sharelist_moodicon"
+        android:layout_below="@+id/tv_share_lineone"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@id/sharelist_time_tv"
+        android:typeface="monospace"
+        android:gravity="left"
+        android:textSize="16sp"
+        android:textColor="#999999"
+        android:text="天天爱睡觉" />
+      <TextView
+        android:id="@+id/sharelist_diary_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_sharelist_moodicon"
+        android:layout_below="@id/sharelist_title_tv"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="fill_horizontal"
+        android:textSize="18sp"
+        
+        android:text="就算你变了墨阳，就算我不在，你身旁，你依然是我最爱的姑娘就算你变了墨阳就算我不在你身旁，你依然是我最爱的姑娘就算你变了墨阳，就算我不在你身旁，你依然是我最爱的姑娘就算你变了墨阳，就算我不在你身旁，你依然是我最爱的姑娘"  />
+    
+    
+</RelativeLayout>
+ <TextView
+        android:id="@+id/tv_share_linetwo"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rl_sharelist_background"
+        android:background="@drawable/notedisplay_line"
+
+        />  
+ <RelativeLayout 
+    android:id="@+id/rl_sharelist_zan"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="5dp"
+    android:layout_below="@+id/tv_share_linetwo"
+    android:orientation="horizontal"
+    android:layout_marginLeft="5dp"
+        >    
+    <Button
+        android:id="@+id/bt_share_sharecontent"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="分享"
+        android:textColor="#9999ff"
+        android:textSize="14sp"
+        android:layout_toLeftOf="@+id/bt_share_comment"
+        android:background="@drawable/notedisplay_line"
+
+        />    
+        <Button
+        android:id="@+id/bt_share_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/bt_share_praise"
+        android:text="评论"
+        android:textSize="14sp"
+        android:textColor="#9999ff"
+        android:background="@drawable/notedisplay_line"
+
+        />    
+      
+         <Button
+        android:id="@+id/bt_share_praise"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"        
+        android:textSize="14sp"
+        android:text="赞"
+        android:textColor="#9999ff"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/notedisplay_line"
+
+        /> 
+        
+        
+</RelativeLayout>
+ <TextView
+        android:id="@+id/tv_share_linethree"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/rl_sharelist_zan"
+        android:background="@drawable/notedisplay_line"
+
+        />  
 
 </RelativeLayout>
