@@ -78,7 +78,8 @@ public class OpenVideoActivity extends Activity{
         		WebBackForwardList mWebBackForwardList = webview.copyBackForwardList();
         		
         		if(mWebBackForwardList.getCurrentIndex() > 0){
-        			String historyUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex()-1).getUrl();
+        			@SuppressWarnings("unused")
+					String historyUrl = mWebBackForwardList.getItemAtIndex(mWebBackForwardList.getCurrentIndex()-1).getUrl();
         		}
 //        		 webview.goBack(); 
         		goMainActivity();

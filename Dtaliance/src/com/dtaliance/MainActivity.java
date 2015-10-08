@@ -13,6 +13,7 @@ import android.view.WindowManager;
 
 public class MainActivity extends Activity {
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,7 +36,8 @@ public class MainActivity extends Activity {
         //Display the current version number
         PackageManager pm = getPackageManager();
         try {
-            PackageInfo pi = pm.getPackageInfo("org.wordpress.android", 0);
+            @SuppressWarnings("unused")
+			PackageInfo pi = pm.getPackageInfo("org.wordpress.android", 0);
 //            TextView versionNumber = (TextView) findViewById(R.id.versionNumber);
 //            versionNumber.setText("Version " + pi.versionName);
         } catch (NameNotFoundException e) {
