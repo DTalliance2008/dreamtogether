@@ -48,6 +48,7 @@ public class TeamCreateActivity extends CompleteActivity{
 	private TextView terListThree;
 	
 	private String TASK = "任务";
+	private String DELETE = "delete";
 	
 	public void setListionEnable(TextView tv, boolean enable){
 		if(enable){
@@ -124,7 +125,7 @@ public class TeamCreateActivity extends CompleteActivity{
 		final int taskLevelClear = taskLevel;
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setPositiveButton("delete" + TASK + Integer.toString(taskLevel), new DialogInterface.OnClickListener() {
+		builder.setPositiveButton(DELETE + TASK + Integer.toString(taskLevel+1), new DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {

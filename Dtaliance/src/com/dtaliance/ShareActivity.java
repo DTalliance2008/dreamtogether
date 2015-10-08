@@ -94,10 +94,12 @@ public class ShareActivity extends Activity{
 					eachItem.put("content", listContent.get(i).getShareContent());
 					arry.add(eachItem);
 				}
-				SimpleAdapter adapter = new SimpleAdapter(ShareActivity.this, (List<Map<String, Object>>)arry, R.drawable.sharelist,
-						new String[] {"username", "content"},
-						new int[] {R.id.tv_sharelist_username, R.id.tv_sharelist_content});
-				share.setAdapter(adapter);
+				
+				
+//				SimpleAdapter adapter = new SimpleAdapter(ShareActivity.this, (List<Map<String, Object>>)arry, R.drawable.sharelist,
+//						new String[] {"username", "content"},
+//						new int[] {R.id.tv_sharelist_username, R.id.tv_sharelist_content});
+//				share.setAdapter(adapter);
 			}
 			
 		};
