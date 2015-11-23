@@ -1,9 +1,16 @@
 package com.dtaliance;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Dialog;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +21,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.dtaliance.util.ConstantUtil;
 import com.dtaliance.util.SPUtil;
@@ -34,6 +42,7 @@ public class TimeAddActivity extends Activity implements OnClickListener{
 	
 	private TextView timeTv;
 	private EditText titleET;
+	private TextView timeSet;
 	
 	
 	@Override
@@ -41,6 +50,16 @@ public class TimeAddActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_timeadd);
 		
+		timeSet = (TextView) findViewById(R.id.et_timeadd_clock);
+		
+		timeSet.setOnClickListener(new OnClickListener() {
+			
+			@SuppressWarnings("deprecation")
+			@Override
+			public void onClick(View arg0) {
+				showDialog(0);
+			}
+		});
 		
 		titleET = (EditText) findViewById(R.id.et_timeadd_tittlecontent);
 		
@@ -133,7 +152,7 @@ public class TimeAddActivity extends Activity implements OnClickListener{
 			
 			@Override
 			public void onClick(View arg0) {
-				saveText(titleET.getText().toString().trim(), "time", loadTitle);
+				saveText(titleET.getText().toString().trim(), timeSet.getText().toString().trim(), loadTitle);
 				finish();
 			}
 		});
@@ -158,6 +177,7 @@ public class TimeAddActivity extends Activity implements OnClickListener{
 	public void getDayTvColor(Context context, String title){
 		String colorArray =	SPUtil.getString(context, ConstantUtil.TIME_ADD, title + DAY_COLOR);
 		setDayTvColor(colorArray);
+		timeSet.setText("");
 	}
 
 	//保存时间颜色数据
@@ -249,5 +269,41 @@ public class TimeAddActivity extends Activity implements OnClickListener{
 		
 		timeTv.setText(timeStr.toString());
 	}
+	
+	@Override
+	@Deprecated
+	protected Dialog onCreateDialog(int id) {
+		Dialog dialog = null;
+		Calendar calendar = Calendar.getInstance();
+		switch(id){
+		case 0:
+			dialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+				
+				@SuppressLint("SimpleDateFormat")
+				@Override
+				public void onTimeSet(TimePicker timePicker, int hour, int min) {
+
+					timeSet.setText(Integer.toString(hour) + ":" + Integer.toString(min));  
+					String timeString = Integer.toString(hour) + ":" + Integer.toString(min) + ":" + "00";
+					SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh-mm-ss");
+					try {
+						Date date = simpleDateFormat.parse(timeString);
+						long t = date.getTime();
+						SimpleDateFormat dateHH = new SimpleDateFormat("hh:mm");
+						Date selDateMiday = new Date(t);
+						timeSet.setText(dateHH.format(selDateMiday));
+					} catch (ParseException e) {
+						e.printStackTrace();
+					}
+					
+				}
+			}, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);  
+		default :
+			break;
+		}
+		return dialog;
+	}
+	
+	
 	
 }

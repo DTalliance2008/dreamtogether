@@ -6,8 +6,10 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
@@ -24,8 +26,8 @@ import android.widget.SearchView.OnQueryTextListener;
 import android.widget.SimpleAdapter;
 
 import com.dtaliance.util.ConstantUtil;
-import com.dtaliance.util.SPUtil;
 
+@SuppressLint("ClickableViewAccessibility")
 public class FriendChooseActivity extends Activity {
 	private SearchView searchView;
 	private ListView listView;
@@ -48,6 +50,7 @@ public class FriendChooseActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_friendchoose);
+		
 		listView = (ListView) findViewById(R.id.lv_friendchoose_list);
 
 		searchView = (SearchView) findViewById(R.id.sv_friendchoose_search);
@@ -107,6 +110,11 @@ public class FriendChooseActivity extends Activity {
 
 	}
 
+	public String getAcitivty() {
+		Intent intent = getIntent();
+		return intent.getStringExtra(ConstantUtil.ACTIVITY);
+	}
+
 	private class FriendSearchBackground extends AsyncTaskWithProgressDialog {
 
 		public FriendSearchBackground(Context progressDialogContext) {
@@ -141,12 +149,20 @@ public class FriendChooseActivity extends Activity {
 	}
 	
 	public void save(String leaguer){
-		SharedPreferences sp = getApplicationContext().getSharedPreferences(ConstantUtil.TEAM_INFO, MODE_PRIVATE);
+		if(ConstantUtil.LAUCHVSACTIVITY.equals(getAcitivty())){
+			saveLeaguer(ConstantUtil.USER_INFO, ConstantUtil.USER_LEAGUER, leaguer);
+		}else{
+			saveLeaguer(ConstantUtil.TEAM_INFO, ConstantUtil.TEAM_LEAGUER, leaguer);
+		}
+	}
+	
+	public void saveLeaguer(String spName, String key, String leaguer){
+		SharedPreferences sp = getApplicationContext().getSharedPreferences(spName, MODE_PRIVATE);
 		
-		Set<String> teamLeaguer = sp.getStringSet(ConstantUtil.TEAM_LEAGUER, new LinkedHashSet<String>());
+		Set<String> teamLeaguer = sp.getStringSet(key, new LinkedHashSet<String>());
 		Editor edit = sp.edit();
 		teamLeaguer.add(leaguer);
-		edit.putStringSet(ConstantUtil.TEAM_LEAGUER, teamLeaguer); 
+		edit.putStringSet(key, teamLeaguer); 
 		edit.commit();
 	}
 

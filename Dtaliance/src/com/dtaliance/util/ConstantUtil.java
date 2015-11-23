@@ -1,8 +1,5 @@
 package com.dtaliance.util;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.annotation.SuppressLint;
 
 @SuppressLint("SdCardPath")
@@ -15,15 +12,9 @@ public class ConstantUtil {
 	//
 	public static final String EXTRA_FIRST = "extraFirst";
 	public static final String EXTRA_SECOND = "extraSecond";
-	public static final Map<String, String> TEAM_CONTENT = new HashMap<String, String>();
-	public static final Map<String, String> MY_CONTENT = new HashMap<String, String>();
 	
 	//数据库表
 	public static final String TABLE_NAME = "tb_persist";//
-	public static final String TYPE_MUSIC = "music";//
-	public static final String TYPE_WORD = "word";
-	public static final String TYPE_SPEECH = "speech";
-	public static final String TYPE_VIDEO = "video";
 	public static final String TABLE_SHARE = "tb_share";//
 	public static final String TABLE_REMIND = "remind";
 	public static final String DB_NAME = "yiqimengDB";
@@ -86,4 +77,11 @@ public class ConstantUtil {
 	//team
 	public static final String TEAM_INFO = "teamInfo";
 	public static final String TEAM_LEAGUER = "teamLeaguer";	
+	
+	public static final String ACTIVITY = "activity";
+	public static final String LAUCHVSACTIVITY = "lauchVsActivity";
+	public static final String TEAMCREATEACTIVITY = "teamCreateActivity";
+	
+	public static final String USER_INFO = "userInfo";
+	public static final String USER_LEAGUER = "userLeaguer";
 }

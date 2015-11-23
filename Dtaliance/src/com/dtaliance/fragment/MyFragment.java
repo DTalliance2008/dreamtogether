@@ -1,5 +1,6 @@
 package com.dtaliance.fragment;
 
+import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -23,7 +25,6 @@ import com.dtaliance.util.SPUtil;
 
 public class MyFragment extends Fragment{
 	
-	private final String TEAM_DREM = "团队梦想  ";
 	private TextView teamNameTv;
 	private TextView teamDreamTv;
 	
@@ -87,6 +88,15 @@ public class MyFragment extends Fragment{
 			}
 		});
 		
+		myBt.setOnLongClickListener(new OnLongClickListener() {
+			
+			@Override
+			public boolean onLongClick(View arg0) {
+				goLaunch();
+				return false;
+			}
+		});
+		
 		return view;
 	}
 	
@@ -94,6 +104,10 @@ public class MyFragment extends Fragment{
 		teamName = SPUtil.getString(getActivity(), ConstantUtil.TEAM_FIRST_LEVEL, ConstantUtil.TEAM_NAME);
 		teamNameTv.setText(teamName);
 		teamDreamTv.setText(SPUtil.getString(getActivity(), ConstantUtil.TEAM_TERMINAL_LEVEL, "title")); 
+	}
+	public void goLaunch(){
+		Intent intent = new Intent(getActivity(), LauncherActivity.class);
+		startActivity(intent);
 	}
 
 	public void goDreamVersus(){
